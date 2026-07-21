@@ -7,7 +7,6 @@ Summary:        OCS-URL handler for OpenDesktop.org
 License:        GPLv3
 URL:            https://www.opendesktop.org
 Source0:        ocs-url-3.1.0.tar.xz
-BuildArch:      x86_64
 
 # Runtime dependencies verified on Fedora 44
 Requires:       qt5-qtbase
@@ -36,5 +35,5 @@ cp -a usr %{buildroot}/
 %changelog
 * Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 3.1.0-1
 - Initial F44 repackage for Sirius-OS
-- Verified binary compatibility with OpenSSL 3.5.x and Qt 5.15
-- Declarative deployment optimized for Atomic hosts
+- Fixed architecture compatibility for Copr/rpkg build
+
