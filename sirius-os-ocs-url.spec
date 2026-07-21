@@ -1,15 +1,12 @@
 %define debug_package %{nil}
 
-Name:           sirius-os-ocs-url
+Name:           os-ocs-url
 Version:        3.1.0
 Release:        1%{?dist}
 Summary:        OCS-URL handler for OpenDesktop.org
 License:        GPLv3
 URL:            https://www.opendesktop.org
 Source0:        ocs-url-3.1.0.tar.xz
-
-Provides:       ocs-url = %{version}-%{release}
-Conflicts:      ocs-url
 
 Requires:       qt5-qtbase
 Requires:       qt5-qtsvg
@@ -37,5 +34,4 @@ cp -a usr %{buildroot}/
 %changelog
 * Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 3.1.0-1
 - Initial F44 repackage for Sirius-OS
-- Renamed to sirius-os-ocs-url for ecosystem consistency
 
