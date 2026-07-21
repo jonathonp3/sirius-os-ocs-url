@@ -1,14 +1,16 @@
 %define debug_package %{nil}
 
 Name:           sirius-os-ocs-url
-Version:        1.0.0
+Version:        3.1.0
 Release:        1%{?dist}
 Summary:        OCS-URL handler for OpenDesktop.org
 License:        GPLv3
 URL:            https://www.opendesktop.org
 Source0:        ocs-url-3.1.0.tar.xz
 
-# Runtime dependencies verified on Fedora 44
+Provides:       ocs-url = %{version}-%{release}
+Conflicts:      ocs-url
+
 Requires:       qt5-qtbase
 Requires:       qt5-qtsvg
 Requires:       qt5-qtdeclarative
@@ -21,7 +23,7 @@ Repackaged for Sirius-OS and Wolf-OS Atomic desktops to enable seamless
 installation of desktop assets from OpenDesktop.org.
 
 %prep
-%setup -q
+%setup -q -n ocs-url-3.1.0
 
 %install
 mkdir -p %{buildroot}
@@ -33,7 +35,7 @@ cp -a usr %{buildroot}/
 %{_datadir}/icons/hicolor/scalable/apps/ocs-url.svg
 
 %changelog
-* Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 1.0.0-1
+* Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 3.1.0-1
 - Initial F44 repackage for Sirius-OS
-- Fixed architecture compatibility for Copr/rpkg build
+- Renamed to sirius-os-ocs-url for ecosystem consistency
 
