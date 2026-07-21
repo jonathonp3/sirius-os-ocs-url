@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 
-Name:           ocs-url
-Version:        3.1.0
+Name:           sirius-os-ocs-url
+Version:        1.0.0
 Release:        1%{?dist}
 Summary:        OCS-URL handler for OpenDesktop.org
 License:        GPLv3
@@ -33,7 +33,7 @@ cp -a usr %{buildroot}/
 %{_datadir}/icons/hicolor/scalable/apps/ocs-url.svg
 
 %changelog
-* Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 3.1.0-1
+* Tue Jul 21 2026 Jonathon <jonathon@sirius-os> - 1.0.0-1
 - Initial F44 repackage for Sirius-OS
 - Fixed architecture compatibility for Copr/rpkg build
 
