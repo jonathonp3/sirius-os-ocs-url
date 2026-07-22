@@ -1,6 +1,6 @@
 %define debug_package %{nil}
 
-Name:           os-ocs-url
+Name:           ocs-url
 Version:        3.1.0
 Release:        1%{?dist}
 Summary:        OCS-URL handler for OpenDesktop.org
